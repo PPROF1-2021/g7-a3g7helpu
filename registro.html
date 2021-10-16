@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon1.png"/>
+	<title>helpU - Registro</title>
+</head>
+<body>
+	<header class="header-secundary">
+        <nav class="nav-left-secundary">
+            <a href="index.html" class="home">Vuelve al inicio</a>
+        </nav>
+        <nav class="nav-right-secundary">
+            <a href="logueo.html" class="boton login">Inicia sesión</a>
+            <a href="registro.html" class="boton registrate">Regístrate</a>
+        </nav>
+    </header>
+	<div class="seccion-registro">
+		<form>
+			
+			<fieldset>
+				<ul class="flex-outer">
+					<li class="img">
+						<img src="assets/img/logo1.png" alt="logo-form" class="logo-form" width="60">
+					</li>
+					<li>
+						<h2 class="title-form">Regístrate</h2>
+					</li>
+					<li>
+						<label for="username">Nombre</label>
+						<input type="text" id="username" name="username" placeholder="Ingrese su nombre">
+					</li>
+					<li>
+						<label for="surname">Apellido</label>
+						<input type="text" id="surname" name="surname" placeholder="Ingrese su apellido">
+					</li>
+					<li>
+						<label for="start">Fecha de Nacimiento</label>
+						<input type="date" id="start" name="trip-start" value="2018-07-22" min="1900-01-01"
+							max="2021-12-31">
+					</li>
+					<li>
+						<label for="city">Ciudad</label>
+						<input type="text" id="city" name="city" placeholder="Ingrese su ciudad">
+					</li>
+					<li>
+						<label for="cpostal">Codigo postal</label>
+						<input type="number" id="cpostal" name="cpostal" placeholder="Ingrese su codigo postal">
+					</li>
+					<li>
+						<label for="adress">Direccion</label>
+						<input type="text" id="adress" name="adress" placeholder="Ingrese su dirección">
+					</li>
+					<li>
+						<label for="email">email</label>
+						<input type="text" id="email" name="email" placeholder="Ingrese su email">
+					</li>
+					<li>
+						<label for="pwd">Contraseña</label><br>
+						<input type="password" id="pwd" name="pwd" placeholder="Crea una contraseña">
+					</li>
+					<li>
+						<button type="submit" value="submit">Enviar</button>
+					</li>
+					<li>
+						<a href="logueo.html"> Ya tenes cuenta?</a>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</div>
+	<footer>
+        <div class="pie-registro">
+            <p>© 2021 helpU - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+
+</html>
