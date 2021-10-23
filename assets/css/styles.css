@@ -146,6 +146,12 @@ header {
     margin-right: 14px;
 }
 
+.boton-contacto {
+    background-color: #ffffff;
+    color: #CF372D;
+    margin-left: 14px;
+}
+
 .caja-img {
     width: 100%;
     display: flex;
