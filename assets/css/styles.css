@@ -140,6 +140,10 @@ header {
     color: #ffffff;
 }
 
+.boton-registrate:hover {
+    color: #ffffff ;
+}
+
 .boton-login {
     background-color: #ffffff;
     color: #CF372D;
@@ -150,6 +154,10 @@ header {
     background-color: #ffffff;
     color: #CF372D;
     margin-left: 14px;
+}
+
+.boton-login:hover, .boton-contacto:hover {
+    color: #CF372D;
 }
 
 .caja-img {
