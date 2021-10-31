@@ -36,14 +36,14 @@ header {
     height: 100%;
 }
 
-.boton-login-responsive {
+.boton-blanco-responsive {
     display: none;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 500;
     line-height: 20px;
     text-align: center;
     text-decoration: none;
-    width: 125px;
+    width: 105px;
     height: 40px;
     border-radius: 6px;
     padding: 10px 20px 10px 20px;
@@ -58,6 +58,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .nav-left a {
@@ -82,6 +83,7 @@ header {
     line-height: 98px;
     font-size: 68px;
     color: #18191F;
+    margin-top:60px;
 }
 
 .contenedor-presentacion .presentacion p {
@@ -92,17 +94,21 @@ header {
     color: #18191F;
 }
 
-.contenedor-presentacion .presentacion .boton-registrate {
-    font-size: 14px;
+.contenedor-presentacion .presentacion .boton-rojo {
+    font-size: 10px;
     font-weight: 500;
     line-height: 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    width: 125px;
+    display: none;
+    width: 105px;
     height: 40px;
     border-radius: 6px;
     padding: 10px 20px 10px 20px;
+}
+
+.contenedor-presentacion .presentacion .ley {
+    display: inline-block;
 }
 
 .caja-dos {
@@ -135,16 +141,16 @@ header {
     padding: 10px 20px 10px 20px;
 }
 
-.boton-registrate {
+.boton-rojo {
     background-color: #CF372D;
     color: #ffffff;
 }
 
-.boton-registrate:hover {
+.boton-rojo:hover {
     color: #ffffff ;
 }
 
-.boton-login {
+.boton-blanco {
     background-color: #ffffff;
     color: #CF372D;
     margin-right: 14px;
@@ -156,7 +162,7 @@ header {
     margin-left: 14px;
 }
 
-.boton-login:hover, .boton-contacto:hover {
+.boton-blanco:hover, .boton-contacto:hover {
     color: #CF372D;
 }
 
@@ -718,8 +724,10 @@ footer p {
         margin-bottom: 0;
     }
     
-
-    .boton-login-responsive {
+    .contenedor-presentacion .presentacion .boton-rojo {
+        display: inline-block;
+    }
+    .boton-blanco-responsive {
         display: inline-block;
     }
 
