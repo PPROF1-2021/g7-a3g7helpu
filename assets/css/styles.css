@@ -465,7 +465,8 @@ footer p {
   
   .flex-outer li input[type="text"],
   .flex-outer li input[type="password"],
-  .flex-outer li input[type="number"] {
+  .flex-outer li input[type="number"],
+  .flex-outer li input[type="email"] {
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: transparent;
@@ -477,7 +478,8 @@ footer p {
   
   .flex-outer li input[type="text"]::placeholder,
   .flex-outer li input[type="password"]::placeholder,
-  .flex-outer li input[type="number"]::placeholder {
+  .flex-outer li input[type="number"]::placeholder,
+  .flex-outer li input[type="email"]::placeholder {
     color: #FFFFFF;
     opacity: 0.7;
   }
