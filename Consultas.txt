@@ -1,0 +1,36 @@
+/*Se añaden datos necesarios para realizar registro de usuario en la base de datos*/
+INSERT into TIPO_USUARIO(TipoUsuario) VALUE ('admin');
+INSERT into TIPO_USUARIO(TipoUsuario) VALUE ('cliente');
+
+/*a. Registrar un nuevo usuario a la base de datos.*/
+INSERT into USUARIO(Contraseña,id_TipoUsuario1,NombreUsuario,FechaAlta,FechaUltimaModificacion)
+VALUES ('123456',2,'Juan',CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+
+/*b. Consultar si existe el usuario “Juan” en la base de datos y si la contraseña “123456” es
+correcta.*/
+SELECT NombreUsuario,Contraseña FROM usuario WHERE NombreUsuario='Juan' and Contraseña='123456';
+
+/*Se añaden 3 datos importantes para realizar la consigna c*/
+INSERT into PAIS(Id_Pais,NombrePais) VALUE (1,'Argentina');
+INSERT into PROVINCIA(Id_Pais1,Id_Provincia,NombreProvincia) VALUE (1,1,'Córdoba');
+INSERT into LOCALIDAD(Id_Provincia1,Id_Localidad,NombreLocalidad) VALUE (1,1,'Córdoba Capital');
+
+/*c. Insertar un registro en nuestra entidad principal.*/
+INSERT into CLIENTE(id_Cliente,id_Usuario1,Nombre,Apellido,FechaNacimiento,Id_Localidad1,Direccion,CodigoPostal,Email) 
+VALUES (1,1,'Juan','Doe',19980422,1,'Bv Illia 300',5000,'test@gmail.com');
+
+/*d. Actualizar un dato en nuestra entidad principal para un registro específico*/
+UPDATE CLIENTE SET Direccion='Bv Illia 500' WHERE Id_Cliente=1;
+
+/*Se añade otra localidad para realizar modificaciones mas adelante*/
+INSERT into LOCALIDAD(Id_Provincia1,Id_Localidad,NombreLocalidad) VALUE (1,2,'Colón');
+
+/*e. Actualizar un dato en nuestra entidad principal para un grupo de registros.*/
+UPDATE CLIENTE SET Direccion='Av Goycoechea 300',id_Localidad1=2, CodigoPostal=5105  WHERE Id_Cliente=1;
+
+/*Se inserta un nuevo usuario que va a ser eliminado*/
+INSERT into USUARIO(Contraseña,id_TipoUsuario1,NombreUsuario,FechaAlta,FechaUltimaModificacion)
+VALUES ('123',2,'Pablo',CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+
+/*f. Eliminar un registro específico de la base de datos.*/
+DELETE FROM USUARIO WHERE NombreUsuario='Pablo';
