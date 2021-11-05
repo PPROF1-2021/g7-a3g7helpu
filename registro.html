@@ -12,7 +12,9 @@
         rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon1.png"/>
+	
 	<title>helpU - Registro</title>
+
 </head>
 <body>
 	<header class="header-secundary" id="headersecundary001">
@@ -38,11 +40,11 @@
 					</li>
 					<li>
 						<label for="username">Nombre</label>
-						<input type="text" id="username" name="username" placeholder="Ingrese su nombre" required>
+						<input type="text" onkeypress="return SoloLetras(event)" id="username" name="username" placeholder="Ingrese su nombre" required>
 					</li>
 					<li>
 						<label for="surname">Apellido</label>
-						<input type="text" id="surname" name="surname" placeholder="Ingrese su apellido" required>
+						<input type="text" onkeypress="return SoloLetras(event)" id="surname" name="surname" placeholder="Ingrese su apellido" required>
 					</li>
 					<li>
 						<label for="start">Fecha de Nacimiento</label>
@@ -79,7 +81,7 @@
 						<input type="password" id="pwd" name="pwd" placeholder="Crea una contraseña" required>
 					</li>
 					<li>
-						<button type="submit" value="submit">Enviar</button>
+						<button type="submit" value="submit" onclick="Validar()">Enviar</button>
 					</li>
 					<li>
 						<a href="logueo.html"> ¿Ya tenés cuenta?</a>
@@ -93,6 +95,28 @@
             <p>© 2021 helpU - Todos los derechos reservados</p>
         </div>
     </footer>
+	<script type="text/javascript" src="/funcionesGrupo7.js"></script>
+	<script>
+		function SoloLetras(e){
+			key= e.keyCode || e.which;
+			tecla = String.fromCharCode(key).toString();
+			letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqáéíóú";
+			
+			especiales= [0,13]:
+			tecla_especial = false
+			for(var i in especiales){
+				if (key == especiales[i]){
+					tecla_especial=true;
+					break;
+				}
+			}
+			if (letras.indexOf(tecla) == -1 && !tecla_especial)
+			{
+				alert("ingrese solo letras");
+				return false;
+			}
+		}
+	</script>
 </body>
 
 </html>

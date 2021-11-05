@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon1.png"/>
     <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
+    <script src="/funcionesGrupo7.js" ></script>
 </head>
 <body>
     <header class="header-secundary" id="header-secundary1">
@@ -34,36 +35,76 @@
                 <h4>Contacto</h4>
             </div>
             <div class="mb-2 fw-bold" id="bold1" >
-                <form action="">
+                <form class= "row g-3 needs-validation" novalidate>
                     <div class="mb-2" id="nombre1">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control-plaintext border-bottom"  name="nombre" id="nombre" placeholder="Ingrese su nombre" style="background-color:#CF372D" required>
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" class="form-control-plaintext border-bottom"  name="Nombre" id="nombre" placeholder="Ingrese su nombre" style="background-color:#CF372D" min="2" max="15" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Rellene el campo por favor</div>
                     </div>
-                    <div class="mb-2" id="apelledo1">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control-plaintext border-bottom" name="apellido" id="apellido" placeholder="Ingrese su apellido"style="background-color:#CF372D" required>
+                    <div class="mb-2" id="apellido1">
+                        <label for="Apellido">Apellido</label>
+                        <input type="text" class="form-control-plaintext border-bottom" name="Apellido" id="apellido" placeholder="Ingrese su apellido"style="background-color:#CF372D" min="2" max="15" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Rellene el campo por favor</div>
                     </div>
                     <div class="mb-2" id="correo1">
                         <label for="correo">Correo Electrónico</label>
                         <input type="email" class="form-control-plaintext border-bottom" name="correo" id="correo" placeholder="Ingrese su correo electrónico"style="background-color:#CF372D" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Rellene el campo por favor</div>
                     </div>
                     <div class="mb-2"id="consulta1">
                         <label for="consulta">Consulta</label>
-                        <textarea name="consulta" id="consulta" class="form-control-plaintext border-bottom" placeholder="Ingrese su consulta"style="background-color:#CF372D"></textarea>
+                        <textarea name="consulta" id="consulta" class="form-control-plaintext border-bottom" placeholder="Ingrese su consulta"style="background-color:#CF372D" required></textarea>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Rellene el campo por favor</div>
                     </div>
-                    <script src="/funcionesGrupo7.js"></script> 
                     <div class="mb-2 text-center" id="boton1" >
-                        <button type="button" class="btn btn-light text-center text-danger fw-bold" onclick="ConfirmEnvio()">Enviar</button>
+                        <button type="submit" class="btn btn-light text-center text-danger fw-bold" onclick="ConfirmEnvio()">Enviar</button>
                         </div>                   
                 </form>
-            </div
+            </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
     <footer class="container-fluid" id="footer1">
         <div class="m-3 text-white" id="derechos1">
                 <p>© 2021 helpU - Todos los derechos reservados</p>
         </div>       
     </footer>
+    <script>       
+
+        (function () {
+        'use strict'
+
+        var forms = document.querySelectorAll('.needs-validation')
+
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+
+        
+    var name=document.getElementById("nombre");
+    var surname=document.getElementById("apellido");
+    if(name!= null && surname!=null)
+    {
+        Swal.fire({
+            title:'Se ha enviado su mensaje con éxito!!',
+            icon:'success',
+            confirmButtonColor: '#CF372D'
+        });
+    }
+    </script>
 </body>
 </html>
