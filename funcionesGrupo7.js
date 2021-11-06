@@ -1,11 +1,14 @@
-function ConfirmEnvio() {
-    if ("myForm")
-        Swal.fire({
+function confirmEnvio() {
+
+  Swal.fire({
             title: 'Se ha enviado su mensaje con éxito!!',
             icon: 'success',
-            confirmButtonColor: '#CF372D'
-        });
+            confirmButtonColor: '#CF372D',
+            
+        });       
 }
+
+  
 
 function validarFormulario() {
     'use strict'
@@ -20,17 +23,15 @@ function validarFormulario() {
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
+          } else{
+            alert('Se ha enviado el mensaje con éxito')
           }
           form.classList.add('was-validated')
-          if(form.checkValidity()){
-              ConfirmEnvio();
-          }
         }, false)
       })
   }
 
 
-   
 
 
 
