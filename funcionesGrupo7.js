@@ -1,34 +1,38 @@
-function ConfirmEnvio(){
-
-    var name= $('#nombre').val();
-    var surname=$('#apellido').val();
-    if(name!= null && surname!=null)
-    {
+function ConfirmEnvio() {
+    if ("myForm")
         Swal.fire({
-            title:'Se ha enviado su mensaje con éxito!!',
-            icon:'success',
+            title: 'Se ha enviado su mensaje con éxito!!',
+            icon: 'success',
             confirmButtonColor: '#CF372D'
         });
-    }
-    
 }
 
-function SoloLetras(e){
-    key= e.keyCode || e.which;
-    tecla = String.fromCharCode(key).toString();
-    letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqáéíóú";
-    
-    especiales= [0,13]:
-    tecla_especial = false
-    for(var i in especiales){
-        if (key == especiales[i]){
-            tecla_especial=true;
-            break;
-        }
-    }
-    if (letras.indexOf(tecla) == -1 && !tecla_especial)
-    {
-        alert("ingrese solo letras");
-        return false;
-    }
-}
+function validarFormulario() {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+          if(form.checkValidity()){
+              ConfirmEnvio();
+          }
+        }, false)
+      })
+  }
+
+
+   
+
+
+
+
+
