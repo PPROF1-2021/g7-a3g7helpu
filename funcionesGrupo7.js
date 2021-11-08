@@ -14,6 +14,7 @@ function validarFormulario() {
           } else{
             confirmEnvio()
             event.preventDefault()
+            return;
           }
           form.classList.add('was-validated')
         }, false)
@@ -21,13 +22,12 @@ function validarFormulario() {
   }
   
 function confirmEnvio() {
-
-    Swal.fire({
-      title: 'Se ha enviado su mensaje con éxito!!',
-      icon: 'success',
-      confirmButtonColor: '#CF372D'
-  });  
-
+  Swal.fire({
+    title: 'Se ha enviado su mensaje con éxito!!',
+    icon: 'success',
+    confirmButtonColor: '#CF372D'
+});  
+myForm.reset()
 }
 
 
