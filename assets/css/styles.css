@@ -421,13 +421,13 @@ footer p {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .container * {
+}
+
+.container * {
     box-sizing: border-box;
-  }
-  
-  .flex-outer {
+}
+
+.flex-outer {
     list-style-type: none;
     width: 320px;
     margin: 0 auto;
@@ -437,42 +437,41 @@ footer p {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
-  }
-  
-   fieldset .flex-outer li label {
+}
+
+fieldset .flex-outer li label {
     font-weight: bold;
-  }
-  
-  .title-form {
+}
+
+.title-form {
     width: 100%;
     font-weight: 800;
     font-size: 22px;
-  }
-  
-  .flex-outer li {
+}
+
+.flex-outer li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-  }
-  
-  
-  .flex-outer > li:not(:last-child) {
+}
+
+.flex-outer > li:not(:last-child) {
     margin-bottom: 20px;
-  }
-  
-  .flex-outer .img {
+}
+
+.flex-outer .img {
     margin: 0 auto;
-  }
-  
-  .flex-outer li input {
+}
+
+.flex-outer li input {
     width: 100%;
     
-  }
-  
-  .flex-outer li input[type="text"],
-  .flex-outer li input[type="password"],
-  .flex-outer li input[type="number"],
-  .flex-outer li input[type="email"] {
+}
+
+.flex-outer li input[type="text"],
+.flex-outer li input[type="password"],
+.flex-outer li input[type="number"],
+.flex-outer li input[type="email"] {
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: transparent;
@@ -480,39 +479,39 @@ footer p {
     height: 40px;
     color: white;
     font-size: 16px;
-  }
-  
-  .flex-outer li input[type="text"]::placeholder,
-  .flex-outer li input[type="password"]::placeholder,
-  .flex-outer li input[type="number"]::placeholder,
-  .flex-outer li input[type="email"]::placeholder {
+}
+
+.flex-outer li input[type="text"]::placeholder,
+.flex-outer li input[type="password"]::placeholder,
+.flex-outer li input[type="number"]::placeholder,
+.flex-outer li input[type="email"]::placeholder {
     color: #FFFFFF;
     opacity: 0.7;
-  }
-  
-  .flex-outer li label,
-  .flex-outer li p {
+}
+
+.flex-outer li label,
+.flex-outer li p {
     padding: 8px;
     font-weight: 300;
     
-  }
-  
-  .flex-outer > li > label,
-  .flex-outer li p {
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
     flex: 1 0 120px;
     max-width: 220px;
-  
-  }
-  
-  .flex-outer > li > label + *{
+
+}
+
+.flex-outer > li > label + *{
     flex: 1 0 220px;
-  }
-  
-  .flex-outer li p {
+}
+
+.flex-outer li p {
     margin: 0;
-  }
-  
-  .flex-outer li button {
+}
+
+.flex-outer li button {
     border: none;
     outline: none;
     width: 100%;
@@ -526,32 +525,32 @@ footer p {
     transition: all 0.3s ease-in;
     margin: 0 auto;
     margin-bottom: 20px;
-  }
-  
-  .flex-outer li button:hover {
+}
+
+.flex-outer li button:hover {
     opacity: 1;
     cursor: pointer;
-  }
-  
-  fieldset {
+}
+
+fieldset {
     border: none;
-  }
-  
-  .title-form {
+}
+
+.title-form {
     text-align: center;
-  }
-  
-  .seccion-registro a{
+}
+
+.seccion-registro a{
     text-decoration: none;
     font-size: 15px;
     line-height: 20px;
     color: white;
     transition: all 0.1s ease-in;
-  }
-  
-  .seccion-registro a:hover{
+}
+
+.seccion-registro a:hover{
     font-size: 15.5px;
-  }
+}
 
 .pie {
     position: absolute;
@@ -574,9 +573,9 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .recuperacion{
+.recuperacion{
     width: 320px;
     height: 320px;
     background: #cf372d;
@@ -816,11 +815,11 @@ footer p {
     .nav-left-secundary {
         width: 100%;
     }
- 
+
     .nav-right-secundary {
         width: 100%;
     }
- 
+
     .seccion-logueo {
         margin-top: 30px;
         height: 450px;
@@ -828,9 +827,15 @@ footer p {
 
     .flex-outer {
         margin-top: 80px;
-      }
+    }
 
     .recuperacion {
         margin-top: 30px;
     }
+}
+
+::placeholder{
+    color: white;
+    font-size: 14px;
+    opacity: 0.7;
 }
