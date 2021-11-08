@@ -1,18 +1,6 @@
-function confirmEnvio() {
-
-  Swal.fire({
-            title: 'Se ha enviado su mensaje con éxito!!',
-            icon: 'success',
-            confirmButtonColor: '#CF372D',
-            
-        });       
-}
-
-  
-
 function validarFormulario() {
     'use strict'
-
+    
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.querySelectorAll('.needs-validation')
   
@@ -24,13 +12,23 @@ function validarFormulario() {
             event.preventDefault()
             event.stopPropagation()
           } else{
-            alert('Se ha enviado el mensaje con éxito')
+            confirmEnvio()
+            event.preventDefault()
           }
           form.classList.add('was-validated')
         }, false)
       })
   }
+  
+function confirmEnvio() {
 
+    Swal.fire({
+      title: 'Se ha enviado su mensaje con éxito!!',
+      icon: 'success',
+      confirmButtonColor: '#CF372D'
+  });  
+
+}
 
 
 
