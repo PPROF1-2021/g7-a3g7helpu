@@ -44,15 +44,16 @@
 						<div class="mb-2" id="nombre">
 							<label for="username">Nombre</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-								onkeypress="return SoloLetras(event)" id="username" name="username"
+							 id="username" name="username" onchange="validaLongitud(this)"
 								placeholder="Ingrese su nombre" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
+							<div class="invalid-feedback  text-dark">Escriba mas de 2 caracteres</div>
 						</div>
 						<div class="mb-2" id="apellido">
 							<label for="surname">Apellido</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-								onkeypress="return SoloLetras(event)" id="surname" name="surname"
+								 id="surname" name="surname"  onchange="validaLongitud(this)"
 								placeholder="Ingrese su apellido" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
@@ -115,7 +116,8 @@
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="boton">
-							<button  class="btn btn-light text-center text-danger fw-bold" type="submit" value="submit" onclick="validaRegistro()">Enviar</button>
+							<button class="btn btn-light text-center text-danger fw-bold" type="submit" value="submit"
+								onclick="validaRegistro()">Enviar</button>
 						</div>
 						<div class="mb-2" id="log">
 							<a href="logueo.html"> ¿Ya tenés cuenta?</a>
