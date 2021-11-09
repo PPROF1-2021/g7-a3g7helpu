@@ -42,11 +42,7 @@ function validaRegistro() {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
-        } else {
-          confirmEnvio()
-          event.preventDefault()
-          return;
-        }
+        } 
         form.classList.add('was-validated')
       }, false)
     })
