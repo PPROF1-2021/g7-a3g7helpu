@@ -35,11 +35,7 @@ function confirmEnvio() {
   });
   
   myForm.reset()
-  
-}
-
-setTimeout(function redirect(){
+  setTimeout(function redirect(){
     window.location.href='index.html', false;
-}, 8000);
-
-
+}, 4450);
+}
