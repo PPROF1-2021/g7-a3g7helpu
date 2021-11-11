@@ -18,7 +18,6 @@
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon1.png" />
     <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
     <script src="funcionesGrupo7.js"></script>
-
 </head>
 
 <body>
@@ -27,14 +26,14 @@
             <a href="index.html" class="home" id="home">Vuelve al inicio</a>
         </nav>
         <nav class="nav-right-secundary" id="nav-right-secundary1">
-            <a href="logueo.html" class="boton login" id="login21">Inicia sesión</a>
-            <a href="registro.html" class="boton registrate" id="registro1">Regístrate</a>
-            <a href="contacto.html" class="boton contacto" id="bcontacto1">Contacto</a>
+            <a href="logueo.html" class="boton-blanco" id="login21">Inicia sesión</a>
+            <a href="registro.html" class="boton-rojo" id="registro1">Regístrate</a>
+            <a href="contacto.html" class="boton-contacto" id="bcontacto1">Contacto</a>
         </nav>
     </header>
     <section class="d-flex justify-content-center align-items-center vh-100" id="seccion1">
         <div class="container-sm-3 p-3 text-white " id="cont1" style="background-color:#CF372D; border-radius: 20px">
-            <div class="mb-3 text-center fw-bold" id="class10">
+            <div class="mb-3 text-center fw-bold" id="class10 ">
                 <img src="assets/img/logo1.png" alt="logo-form" class="logo-form" id="class2" width="60">
                 <h4>Contacto</h4>
             </div>
@@ -44,33 +43,33 @@
                         <label for="Nombre">Nombre</label>
                         <input type="text" class="form-control-plaintext border-bottom" name="Nombre" id="nombre"
                             placeholder="Ingrese su nombre" style="background-color:#CF372D" min="2" max="15" required>
-                        <div class="valid-feedback">Campo correcto</div>
-                        <div class="invalid-feedback  text-white">Rellene el campo por favor</div>
+                        <div class="valid-feedback text-secondary">Campo correcto</div>
+                        <div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
                     </div>
                     <div class="mb-2" id="apellido1">
                         <label for="Apellido">Apellido</label>
                         <input type="text" class="form-control-plaintext border-bottom" name="Apellido" id="apellido"
                             placeholder="Ingrese su apellido" style="background-color:#CF372D" min="2" max="15"
                             required>
-                        <div class="valid-feedback">Campo correcto</div>
-                        <div class="invalid-feedback text-white">Rellene el campo por favor</div>
+                        <div class="valid-feedback text-secondary">Campo correcto</div>
+                        <div class="invalid-feedback text-dark">Rellene el campo por favor</div>
                     </div>
                     <div class="mb-2" id="correo1">
                         <label for="correo">Correo Electrónico</label>
                         <input type="email" class="form-control-plaintext border-bottom" name="correo" id="correo"
                             placeholder="Ingrese su correo electrónico" style="background-color:#CF372D" required>
-                        <div class="valid-feedback">Campo correcto</div>
-                        <div class="invalid-feedback  text-white">Rellene el campo por favor</div>
+                        <div class="valid-feedback text-secondary">Campo correcto</div>
+                        <div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
                     </div>
                     <div class="mb-2" id="consulta1">
                         <label for="consulta">Consulta</label>
                         <textarea name="consulta" id="consulta" class="form-control-plaintext border-bottom"
                             placeholder="Ingrese su consulta" style="background-color:#CF372D" required></textarea>
-                        <div class="valid-feedback">Campo correcto</div>
-                        <div class="invalid-feedback  text-white">Rellene el campo por favor</div>
+                        <div class="valid-feedback text-secondary">Campo correcto</div>
+                        <div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
                     </div>
                     <div class="mb-2 text-center" id="boton1">
-                        <button type="submit" onclick="validarFormulario() " class="btn btn-light text-center text-danger fw-bold">Enviar</button>
+                        <button class="btn btn-light text-center text-danger fw-bold" type="submit" onclick="validarFormulario()" >Enviar</button>
                     </div>
                 </form>
             </div>
