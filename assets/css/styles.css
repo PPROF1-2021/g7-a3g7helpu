@@ -629,6 +629,31 @@ fieldset {
     cursor: pointer;
 }
 
+.borrar {
+    display:none;
+}
+
+.contenedorDatos {
+    height: 65vh;
+    width: 60%;
+    text-align: center;
+    background-color: #18191F;
+    margin-top:-20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.encabezado-datos {
+    font-size: 20px;
+}
+
 
 @media screen and (max-width: 1280px) {
     .contenedor-presentacion .presentacion h1 {
@@ -812,6 +837,10 @@ fieldset {
 
     .flex-outer {
         margin-top: 80px;
+    }
+
+    .encabezado-datos {
+        font-size: 16px;
     }
 
     .recuperacion {

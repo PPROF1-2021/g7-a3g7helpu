@@ -33,7 +33,10 @@
 		</nav>
 	</header>
 	<section class="d-flex justify-content-center align-items-center mt-5 pt-5 mb-3" id="seccion">
-		<div class="container-sm-3 p-3 text-white " id="cont1" style="background-color:#CF372D; border-radius: 20px">
+		<div id="contenedor-datos">
+
+		</div>
+		<div class="container-sm-3 p-3 text-white" id="cont1" style="background-color:#CF372D; border-radius: 20px">
 			<div class="mb-3 text-center fw-bold" id="class10 ">
 				<img src="assets/img/logo1.png" alt="logo-form" class="logo-form" id="logoform" width="60">
 				<h4>Registrate</h4>
@@ -41,7 +44,7 @@
 				<div class="seccion-registro" id="seccionregistro">
 				</div>
 				<div class="mb-2 fw-bold" id="bold1">
-					<form id="registro" action="" class="needs-validation" novalidate>
+					<form id="registro" action="" class="needs-validation" novalidate onsubmit="return validaRegistro()">
 						<div class="mb-2" id="nombre">
 							<label for="username">Nombre</label>
 							<input type="text" class="form-control-plaintext border-bottom"
@@ -104,7 +107,7 @@
 
 						<div class="mb-2" id="email">
 							<label for="email">email</label>
-							<input type="email" class="form-control-plaintext border-bottom" id="email" name="email"
+							<input type="email" class="form-control-plaintext border-bottom" id="email-registro" name="email"
 								placeholder="Ingrese su email" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
