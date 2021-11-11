@@ -372,7 +372,8 @@ footer p {
     margin-bottom: 20px;
 }
 .seccion-logueo input[type="text"],
-.seccion-logueo input[type="password"]{
+.seccion-logueo input[type="password"],
+.seccion-logueo input[type="email"]{
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: transparent;
