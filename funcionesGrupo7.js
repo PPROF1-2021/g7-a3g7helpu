@@ -63,5 +63,5 @@ function confirmEnvio() {
   myForm.reset()
   setTimeout(function redirect(){
     window.location.href='index.html', false;
-}, 4450);
+}, 4500);
 }
