@@ -76,6 +76,10 @@ function mostrarDatosDeRegistro(){
   var fechaActual = new Date();
   var edad = fechaActual.getFullYear() - nacCliente.getFullYear();
   var nombreCliente = document.getElementById('username').value;
+  var paisCliente = document.getElementById('country').value;
+  var provinciaCliente = document.getElementById('province').value;
+  var ciudadCliente = document.getElementById('city').value;
+  var direccionCliente = document.getElementById('adress').value;
   var apellidoCliente =  document.getElementById('surname').value;
   var emailCliente = document.getElementById('email-registro').value;
   const formularioDeRegistro = document.getElementById('cont1');
@@ -87,7 +91,7 @@ function mostrarDatosDeRegistro(){
   if(contenedorDeDatos.getElementsByClassName(className).length == 0){
     var encabezadoDatos = document.createElement("h4");
     encabezadoDatos.className = className;
-    encabezadoDatos.textContent = "Felicidades " + nombreCliente + " " + apellidoCliente + "! ya sos parte de helpU. En breve recibiras informacion en tu correo electronico " + emailCliente + " con los pasos a seguir. En helpU buscamos ayudar a personas de todas las edades por lo que con tus " + edad + " años de edad sos mas que bienvenid@!";
+    encabezadoDatos.textContent = "Felicidades " + nombreCliente + " " + apellidoCliente + "! ya sos parte de helpU. En breve recibiras informacion en tu correo electronico " + emailCliente + " con los pasos a seguir. En helpU buscamos ayudar a personas de todas las edades por lo que con tus " + edad + " años de edad sos mas que bienvenid@!." + " Según lo que ingresaste te encontrás en: " + direccionCliente + " " + ciudadCliente + ", " + provinciaCliente + ", " + paisCliente;
     contenedorDeDatos.appendChild(encabezadoDatos);
   }
 }
