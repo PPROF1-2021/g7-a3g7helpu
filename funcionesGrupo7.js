@@ -36,10 +36,14 @@ function validaRegistro() {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
-        } 
+        } else {
+          mostrarDatosDeRegistro()
+        }
         form.classList.add('was-validated')
       }, false)
     })
+    
+    return false;
 }
 
 function validaLongitud(e) {
@@ -64,4 +68,26 @@ function confirmEnvio() {
   setTimeout(function redirect(){
     window.location.href='index.html', false;
 }, 4500);
+}
+
+function mostrarDatosDeRegistro(){
+  var className = "encabezado-datos";
+  var nacCliente = new Date(document.getElementById('start').value);
+  var fechaActual = new Date();
+  var edad = fechaActual.getFullYear() - nacCliente.getFullYear();
+  var nombreCliente = document.getElementById('username').value;
+  var apellidoCliente =  document.getElementById('surname').value;
+  var emailCliente = document.getElementById('email-registro').value;
+  const formularioDeRegistro = document.getElementById('cont1');
+  const contenedorDeDatos = document.getElementById('contenedor-datos');
+
+  formularioDeRegistro.classList.add('borrar');
+  contenedorDeDatos.classList.add('contenedorDatos');
+
+  if(contenedorDeDatos.getElementsByClassName(className).length == 0){
+    var encabezadoDatos = document.createElement("h4");
+    encabezadoDatos.className = className;
+    encabezadoDatos.textContent = "Felicidades " + nombreCliente + " " + apellidoCliente + "! ya sos parte de helpU. En breve recibiras informacion en tu correo electronico " + emailCliente + " con los pasos a seguir. En helpU buscamos ayudar a personas de todas las edades por lo que con tus " + edad + " años de edad sos mas que bienvenid@!";
+    contenedorDeDatos.appendChild(encabezadoDatos);
+  }
 }
