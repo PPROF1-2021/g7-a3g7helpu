@@ -319,22 +319,6 @@ footer p {
     padding: 10px 20px 10px 20px;
 }
 
-.registrate {
-    background-color: #CF372D;
-    color: #ffffff;
-}
-
-.login {
-    background-color: #FFFFFF;
-    color: #CF372D;
-    margin-right: 14px;
-}
-.contacto {
-    background-color: #FFFFFF;
-    color: #CF372D;
-    margin-left: 14px;
-}
-
 .seccion-logueo{
     width: 320px;
     height: 450px;
