@@ -37,7 +37,7 @@ function validaRegistro() {
           event.preventDefault()
           event.stopPropagation()
         } else {
-          test()
+          mostrarDatosDeRegistro()
         }
         form.classList.add('was-validated')
       }, false)
@@ -70,7 +70,7 @@ function confirmEnvio() {
 }, 4500);
 }
 
-function test(){
+function mostrarDatosDeRegistro(){
   var className = "encabezado-datos";
   var nacCliente = new Date(document.getElementById('start').value);
   var fechaActual = new Date();
