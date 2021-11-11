@@ -94,4 +94,7 @@ function mostrarDatosDeRegistro(){
     encabezadoDatos.textContent = "Felicidades " + nombreCliente + " " + apellidoCliente + "! ya sos parte de helpU. En breve recibiras informacion en tu correo electronico " + emailCliente + " con los pasos a seguir. En helpU buscamos ayudar a personas de todas las edades por lo que con tus " + edad + " años de edad sos mas que bienvenid@!." + " Según lo que ingresaste te encontrás en: " + direccionCliente + " " + ciudadCliente + ", " + provinciaCliente + ", " + paisCliente;
     contenedorDeDatos.appendChild(encabezadoDatos);
   }
+  setTimeout(function redirect(){
+    window.location.href='index.html', false;
+}, 4500);
 }
