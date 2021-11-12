@@ -48,7 +48,7 @@
 						<div class="mb-2" id="nombre">
 							<label for="username">Nombre</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-							 id="username" name="username" onchange="validaLongitud(this)"
+							 id="username" name="username" onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)"
 								placeholder="Ingrese su nombre" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
@@ -57,10 +57,11 @@
 						<div class="mb-2" id="apellido">
 							<label for="surname">Apellido</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-								 id="surname" name="surname"  onchange="validaLongitud(this)"
+								 id="surname" name="surname" onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)"
 								placeholder="Ingrese su apellido" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
+							<div class="invalid-feedback  text-dark">Escriba mas de 2 caracteres</div>
 						</div>
 						<div class="mb-2" id="fNac">
 							<label for="start">Fecha de Nacimiento</label>
@@ -72,35 +73,35 @@
 						<div class="mb-2" id="direccion">
 							<label for="adress">Dirección</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="adress" name="adress"
-								placeholder="Ingrese su dirección" required>
+							onchange="validaLongitud(this)"  placeholder="Ingrese su dirección" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="ciudad">
 							<label for="city">Ciudad</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="city" name="city"
-								placeholder="Ingrese su ciudad" required>
+							onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su ciudad" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="cpostal">
 							<label for="cpostal">Código postal</label>
 							<input type="number" class="form-control-plaintext border-bottom" id="cpostal"
-								name="cpostal" placeholder="Ingrese su código postal" required>
+								name="cpostal" onchange="validaCP(this)" placeholder="Ingrese su código postal" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="provincia">
 							<label for="province">Provincia</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="province"
-								name="province" placeholder="Ingrese su provincia" required>
+								name="province" onkeypress="return soloLetras(this)" onpaste=" return false"onchange="validaLongitud(this)" placeholder="Ingrese su provincia" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="pais">
 							<label for="country">País</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="country" name="country"
-								placeholder="Ingrese su país" required>
+							onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su país" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
@@ -115,7 +116,7 @@
 						<div class="mb-2" id="contraseña">
 							<label for="pwd">Contraseña</label><br>
 							<input type="password" class="form-control-plaintext border-bottom" id="pwd" name="pwd"
-								placeholder="Crea una contraseña" required>
+								onchange="validaPass(this)" placeholder="Crea una contraseña de 8 a 12 caracteres" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
