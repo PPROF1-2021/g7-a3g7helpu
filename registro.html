@@ -49,7 +49,7 @@
 						<div class="mb-2" id="nombre">
 							<label for="username">Nombre</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-							 id="username" name="username" onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)"
+							 id="username" name="username" onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)"
 								placeholder="Ingrese su nombre" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
@@ -58,7 +58,7 @@
 						<div class="mb-2" id="apellido">
 							<label for="surname">Apellido</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-								 id="surname" name="surname" onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)"
+								 id="surname" name="surname" onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)"
 								placeholder="Ingrese su apellido" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
@@ -81,7 +81,7 @@
 						<div class="mb-2" id="ciudad">
 							<label for="city">Ciudad</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="city" name="city"
-							onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su ciudad" required>
+							onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su ciudad" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
@@ -95,14 +95,14 @@
 						<div class="mb-2" id="provincia">
 							<label for="province">Provincia</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="province"
-								name="province" onkeypress="return soloLetras(this)" onpaste=" return false"onchange="validaLongitud(this)" placeholder="Ingrese su provincia" required>
+								name="province" onkeypress="return soloLetras(event)" onpaste=" return false"onchange="validaLongitud(this)" placeholder="Ingrese su provincia" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="pais">
 							<label for="country">País</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="country" name="country"
-							onkeypress="return soloLetras(this)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su país" required>
+							onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su país" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
