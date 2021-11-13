@@ -42,14 +42,14 @@
                     <div class="mb-2" id="nombre1">
                         <label for="Nombre">Nombre</label>
                         <input type="text" class="form-control-plaintext border-bottom" name="Nombre" id="nombre"
-                            placeholder="Ingrese su nombre" style="background-color:#CF372D" min="2" max="15" required>
+                        onkeypress="return soloLetras(event)" onpaste=" return false" placeholder="Ingrese su nombre" style="background-color:#CF372D" min="2" max="15" required>
                         <div class="valid-feedback text-secondary">Campo correcto</div>
                         <div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
                     </div>
                     <div class="mb-2" id="apellido1">
                         <label for="Apellido">Apellido</label>
                         <input type="text" class="form-control-plaintext border-bottom" name="Apellido" id="apellido"
-                            placeholder="Ingrese su apellido" style="background-color:#CF372D" min="2" max="15"
+                        onkeypress="return soloLetras(event)" onpaste=" return false" placeholder="Ingrese su apellido" style="background-color:#CF372D" min="2" max="15"
                             required>
                         <div class="valid-feedback text-secondary">Campo correcto</div>
                         <div class="invalid-feedback text-dark">Rellene el campo por favor</div>
