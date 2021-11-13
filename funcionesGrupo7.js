@@ -58,15 +58,15 @@ function soloLetras(e){
         }
     }
     if(letras.indexOf(tecla) == -1 && !tecla_especial){
-        alert("Ingrese solo letras");
-        return false;
-      }
+      mensajeError();  
+      return false;
+    }
 
 }
 
 function validaLongitud(e) {
   if (e.value.length < 2 ) {
-    alert("Escriba más de 2 caracteres");
+    mensajeError(); 
     e.value= '';
     e.focus();
     e.select();
@@ -75,19 +75,30 @@ function validaLongitud(e) {
 
 function validaCP(e){
   if(isNaN(e.value)){
-    alert("Ingrese un código postal válido");
+    mensajeError(); 
     e.value= '';
     e.focus();
     e.select();
   }
 }
+
 function validaPass(e){
   if (e.value.length <8 || e.value.length >12){
-    alert("Ingrese una contraseña de 8 a 12 caracteres");
+    mensajeError(); 
     e.value= '';
     e.focus();
     e.select();
   }
+}
+
+function mensajeError(){
+  Swal.fire({
+    toast: true,
+    icon: 'error',
+    title: 'El valor ingresado es incorrecto',
+    confirmButtonText: 'Aceptar',
+    confirmButtonColor: '#cf372d'
+  })
 }
 
 function confirmEnvio() {
@@ -132,5 +143,5 @@ function mostrarDatosDeRegistro(){
   }
   setTimeout(function redirect(){
     window.location.href='index.html', false;
-}, 4500);
+  }, 4500);
 }
