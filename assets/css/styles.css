@@ -846,6 +846,10 @@ fieldset {
     .recuperacion {
         margin-top: 30px;
     }
+
+    .contenedorDatos {
+        width: 80%;
+    }
 }
 
 ::placeholder{
