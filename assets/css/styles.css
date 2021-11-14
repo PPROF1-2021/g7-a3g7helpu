@@ -321,7 +321,7 @@ footer p {
 
 .seccion-logueo{
     width: 320px;
-    height: 450px;
+    max-height: 450px;
     background: #CF372D;
     color: white;
     top:50%;
@@ -550,6 +550,10 @@ fieldset {
     align-items: center;
 }
 
+.pie-index {
+    text-align: center;
+}
+
 .pie-registro {
     width: 100%;
     height: 64px;
@@ -652,6 +656,14 @@ fieldset {
 
 .encabezado-datos {
     font-size: 20px;
+}
+
+.form-logueo {
+    height: 100vh;
+}
+
+.pie-logueo {
+    position: relative;
 }
 
 
@@ -849,6 +861,16 @@ fieldset {
 
     .contenedorDatos {
         width: 80%;
+    }
+
+    .seccion-logueo {
+        font-size: 14px;
+        width: 300px;
+        position: relative;
+    }
+
+    .pie-logueo {
+        margin-top: 30px;
     }
 }
 

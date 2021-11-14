@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta name= "description" content="Esta es la pagina de logueo. Contiene formulario que permite el ingreso a la aplicacion">
     <meta name= "keywords" content="Inicio Sesion, Ingresar">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,20 +27,22 @@
             <a href="contacto.html" class="boton-contacto" id="botoncontacto">Contacto</a>
         </nav>
     </header>
-    <div class="seccion-logueo" id="seccionlogueo">
-        <img src="assets/img/logo1.png" alt="logo-form" class="logo-form"id="imagen01" width="60">
-        <h1>Inicio de Sesión</h1>
-        <form>
-            <label for="email-login">Email</label>
-            <input id ="email-login" type="email" placeholder="Ingrese su correo electronico" required/>
-            <label for="contraseña">Contraseña</label>
-            <input id="contraseña" type="password" placeholder="Ingrese su Contraseña" required/>
-            <input type="submit" value="Ingresar" />
-            <a href="recuperacion.html"> Olvidaste la clave?</a><br>
-            <a href="registro.html"> No te has registrado aún?</a>
-        </form>
-    </div>
-    <footer>
+    <section class="form-logueo">
+        <div class="seccion-logueo" id="seccionlogueo">
+            <img src="assets/img/logo1.png" alt="logo-form" class="logo-form"id="imagen01" width="60">
+            <h1>Inicio de Sesión</h1>
+            <form>
+                <label for="email-login">Email</label>
+                <input id ="email-login" type="email" placeholder="Ingrese su correo electronico" required/>
+                <label for="contraseña">Contraseña</label>
+                <input id="contraseña" type="password" placeholder="Ingrese su Contraseña" required/>
+                <input type="submit" value="Ingresar" />
+                <a href="recuperacion.html"> Olvidaste la clave?</a><br>
+                <a href="registro.html"> No te has registrado aún?</a>
+            </form>
+        </div>
+    </section>
+    <footer class="pie-logueo">
         <div class="pie" id="footer2">
             <p>© 2021 helpU - Todos los derechos reservados</p>
         </div>
