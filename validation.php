@@ -12,9 +12,9 @@
     $filas=mysqli_num_rows($result);
 
     if($filas) {
-        echo "Ingreso exitoso";
+        header("location:bienvenida.html");
     } else {
-        echo "Error: datos incorrectos";
+        header("location:error-login.html");
     }
 
     mysqli_free_result($result);
