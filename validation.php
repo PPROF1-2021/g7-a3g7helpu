@@ -12,9 +12,9 @@
     $filas=mysqli_num_rows($result);
 
     if($filas) {
-        header("location:bienvenida.html");
+        header("location:bienvenida.php");
     } else {
-        header("location:error-login.html");
+        header("location:error-login.php");
     }
 
     mysqli_free_result($result);
