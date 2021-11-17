@@ -639,8 +639,8 @@ fieldset {
 }
 
 .contenedorDatos {
-    height: 65vh;
-    width: 60%;
+    min-height: 65vh;
+    width: 75%;
     text-align: center;
     background-color: #18191F;
     margin-top:-20px;
@@ -655,8 +655,13 @@ fieldset {
     overflow: hidden;
 }
 
+
 .encabezado-datos {
     font-size: 20px;
+}
+
+.contenedorDatos h4 {
+    width:100%;
 }
 
 .form-logueo {
