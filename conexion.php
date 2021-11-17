@@ -5,5 +5,5 @@
     $nombd="id17547978_helpu";
 
     $conn=new mysqli($host,$usuario,$contraseña,$nombd);
-    mysqli_query($conn , SET character_set_result-utf8);
+    mysqli_query($conn , "SET character_set_result-utf8");
 ?>
