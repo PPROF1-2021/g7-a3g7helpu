@@ -14,4 +14,13 @@
 
     //INSERTAR DATOS
     $query="INSERT INTO Cliente(Nombre,Apellido,Nacimiento,Direccion,CP,Provincia,Pais,Email,Contraseña) VALUES('$nombre','$apellido','$nacimiento','$direccion','$ciudad','$codigopostal','$provincia','$pais','$email','$contraseña')"
+
+    //VERIFICACION
+    $resultado=$conexion->query($query);
+
+    if($resultado){
+        echo "Datos insertados correctamente";
+    } else {
+        echo "No se insertaron los datos";
+    }
 ?>
