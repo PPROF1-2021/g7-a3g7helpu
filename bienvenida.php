@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <body>
         <header class="header-secundary" id="headersecundary001">
             <nav class="nav-left-secundary" id="navleftsecundary002">
                 <a href="index.html" class="home">Vuelve al inicio</a>
