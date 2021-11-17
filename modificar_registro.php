@@ -8,9 +8,9 @@
     $resultTwo = mysqli_query($conn,$consultaTres);
 
     if(mysqli_affected_rows($conn)) {
-        header("location:exito-modificacion.php");
+        header("location:exito-modificacion.html");
     } else {
-        header("location:error-modificacion.php");
+        header("location:error-modificacion.html");
     }
     mysqli_close($conn);
 ?>
