@@ -63,8 +63,8 @@
 			<a href="contacto.html" class="boton-contacto" id="botoncontacto">Contacto</a>
 		</nav>
 	</header>
-    <section class="d-flex justify-content-center align-items-center mt-5 pt-5 mb-3" id="seccion">
-		<div id="contenedor-datos" class="contenedorDatos">
+    <section class="d-flex justify-content-center align-items-center mt-5 pt-5 mb-3 mh-100" id="seccion">
+		<div id="contenedor-datos" class="contenedorDatos mh-100">
             <h4>Felicidades <?php echo $nombre?> <?php echo $apellido?> ya sos parte de helpU! Según lo que ingresaste te encontrás en: <?php echo $direccion?>, <?php echo $ciudad?>, <?php echo $provincia?>, <?php echo $pais?>. Esperamos poder ser de gran ayuda ante cualquier emergencia que se te presente!</h4>
 		</div>
     </section>
