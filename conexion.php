@@ -6,9 +6,4 @@
 
     $conn=new mysqli($host,$usuario,$contraseña,$nombd);
     mysqli_query($conn , SET character_set_result-utf8);
-    if($conn){
-        echo "Conexion exitosa";
-    } else {
-        echo "No se realizo la conexion a la base de datos";
-    }
 ?>
