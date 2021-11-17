@@ -13,7 +13,7 @@
     $contraseña=$_POST['pwd'];
 
     //INSERTAR DATOS
-    $query="INSERT INTO Cliente(Nombre,Apellido,Nacimiento,Direccion,CP,Provincia,Pais,Email,Contraseña) VALUES('$nombre','$apellido','$nacimiento','$direccion','$ciudad','$codigopostal','$provincia','$pais','$email','$contraseña')"
+    $query="INSERT INTO Cliente(Nombre,Apellido,Nacimiento,Direccion,CP,Provincia,Pais,Email,Contraseña) VALUES('$nombre','$apellido','$nacimiento','$direccion','$ciudad','$codigopostal','$provincia','$pais','$email','$contraseña')";
 
     //VERIFICACION
     $resultado=$conexion->query($query);
