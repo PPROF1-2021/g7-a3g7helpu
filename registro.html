@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<meta name="description"
 		content="Esta es la pagina de registro. Contiene formulario que permite el registro a la aplicacion">
@@ -15,6 +15,7 @@
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon1.png" />
+	<script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
 	<script type="text/javascript" src="funcionesGrupo7.js"></script>
 
 	<title>helpU - Registro</title>
@@ -27,24 +28,28 @@
 			<a href="index.html" class="home">Vuelve al inicio</a>
 		</nav>
 		<nav class="nav-right-secundary" id="navrightsecundary002">
-			<a href="logueo.html" class="boton login" id="botonlogin001">Inicia sesión</a>
-			<a href="registro.html" class="boton registrate" id="botonregistrate001">Regístrate</a>
-			<a href="contacto.html" class="boton contacto" id="botoncontacto">Contacto</a>
+			<a href="logueo.html" class="boton-blanco" id="botonlogin001">Inicia sesión</a>
+			<a href="registro.html" class="boton-rojo" id="botonregistrate001">Regístrate</a>
+			<a href="contacto.html" class="boton-contacto" id="botoncontacto">Contacto</a>
 		</nav>
 	</header>
-	<section class="d-flex justify-content-center align-items-center " id="seccion">
-		<div class="container-sm-3 p-3 text-white " id="cont1" style="background-color:#CF372D; border-radius: 20px">
-			<div class="mb-3 text-center fw-bold" id="class10 ">
+	<section class="d-flex justify-content-center align-items-center mt-5 pt-5 mb-3" id="seccion">
+		<div id="contenedor-datos">
+
+		</div>
+		<div class="container-sm-3 p-3 text-white" id="cont1" style="background-color:#CF372D; border-radius: 20px">
+			<div class="mb-3 text-center fw-bold" id="class10">
 				<img src="assets/img/logo1.png" alt="logo-form" class="logo-form" id="logoform" width="60">
 				<h4>Registrate</h4>
+			</div>	
 				<div class="seccion-registro" id="seccionregistro">
 				</div>
 				<div class="mb-2 fw-bold" id="bold1">
-					<form id="registro" action="" class="needs-validation" novalidate>
+					<form name="registro" id="registro" method="post" class="needs-validation" novalidate action="/guardar_registro.php">
 						<div class="mb-2" id="nombre">
 							<label for="username">Nombre</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-							 id="username" name="username" onchange="validaLongitud(this)"
+							 id="username" name="username" onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)"
 								placeholder="Ingrese su nombre" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
@@ -53,57 +58,57 @@
 						<div class="mb-2" id="apellido">
 							<label for="surname">Apellido</label>
 							<input type="text" class="form-control-plaintext border-bottom"
-								 id="surname" name="surname"  onchange="validaLongitud(this)"
+								 id="surname" name="surname" onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)"
 								placeholder="Ingrese su apellido" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
+							<div class="invalid-feedback  text-dark">Escriba mas de 2 caracteres</div>
 						</div>
 						<div class="mb-2" id="fNac">
 							<label for="start">Fecha de Nacimiento</label>
 							<input type="date" class="form-control-plaintext border-bottom" id="start" name="trip-start"
-								value="2018-07-22" min="1900-01-01" max="2021-12-31" required>
+							 value="2018-07-22" min="1900-01-01" max="2021-12-31" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="direccion">
 							<label for="adress">Dirección</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="adress" name="adress"
-								placeholder="Ingrese su dirección" required>
+							onchange="validaLongitud(this)"  placeholder="Ingrese su dirección" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="ciudad">
 							<label for="city">Ciudad</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="city" name="city"
-								placeholder="Ingrese su ciudad" required>
+							onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su ciudad" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="cpostal">
 							<label for="cpostal">Código postal</label>
 							<input type="number" class="form-control-plaintext border-bottom" id="cpostal"
-								name="cpostal" placeholder="Ingrese su código postal" required>
+								name="cpostal" onchange="validaCP(this)" placeholder="Ingrese su código postal" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="provincia">
 							<label for="province">Provincia</label>
-							<input type="text" class="form-control-plaintext border-bottom" id="province"
-								name="province" placeholder="Ingrese su provincia" required>
+							<input type="text" class="form-control-plaintext border-bottom" id="province" name="province" onkeypress="return soloLetras(event)" onpaste="return false" onchange="validaLongitud(this)" placeholder="Ingrese su provincia" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 						<div class="mb-2" id="pais">
 							<label for="country">País</label>
 							<input type="text" class="form-control-plaintext border-bottom" id="country" name="country"
-								placeholder="Ingrese su país" required>
+							onkeypress="return soloLetras(event)" onpaste=" return false" onchange="validaLongitud(this)" placeholder="Ingrese su país" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
 
 						<div class="mb-2" id="email">
 							<label for="email">email</label>
-							<input type="email" class="form-control-plaintext border-bottom" id="email" name="email"
+							<input type="email" class="form-control-plaintext border-bottom" id="email-registro" name="email"
 								placeholder="Ingrese su email" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
@@ -111,26 +116,25 @@
 						<div class="mb-2" id="contraseña">
 							<label for="pwd">Contraseña</label><br>
 							<input type="password" class="form-control-plaintext border-bottom" id="pwd" name="pwd"
-								placeholder="Crea una contraseña" required>
+								onchange="validaPass(this)" placeholder="Crea una contraseña de 8 a 12 caracteres" required>
 							<div class="valid-feedback text-secondary">Campo correcto</div>
 							<div class="invalid-feedback  text-dark">Rellene el campo por favor</div>
 						</div>
-						<div class="mb-2" id="boton">
+						<div class="mb-2 text-center" id="boton">
 							<button class="btn btn-light text-center text-danger fw-bold" type="submit" value="submit"
 								onclick="validaRegistro()">Enviar</button>
 						</div>
 						<div class="mb-2" id="log">
-							<a href="logueo.html"> ¿Ya tenés cuenta?</a>
+							<a class ="text-white" href="logueo.html"> ¿Ya tenés cuenta?</a>
 						</div>
 					</form>
 				</div>
-			</div>
-	</section>
+    	</section>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
 		crossorigin="anonymous"></script>
 	<footer class="container-fluid" id="footer1">
-		<div class="m-3 text-white" id="derechos1">
+		<div class="m-3 text-white text-center" id="derechos1">
 			<p>© 2021 helpU - Todos los derechos reservados</p>
 		</div>
 	</footer>

@@ -319,25 +319,9 @@ footer p {
     padding: 10px 20px 10px 20px;
 }
 
-.registrate {
-    background-color: #CF372D;
-    color: #ffffff;
-}
-
-.login {
-    background-color: #FFFFFF;
-    color: #CF372D;
-    margin-right: 14px;
-}
-.contacto {
-    background-color: #FFFFFF;
-    color: #CF372D;
-    margin-left: 14px;
-}
-
 .seccion-logueo{
     width: 320px;
-    height: 450px;
+    max-height: 450px;
     background: #CF372D;
     color: white;
     top:50%;
@@ -372,7 +356,8 @@ footer p {
     margin-bottom: 20px;
 }
 .seccion-logueo input[type="text"],
-.seccion-logueo input[type="password"]{
+.seccion-logueo input[type="password"],
+.seccion-logueo input[type="email"]{
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: transparent;
@@ -554,6 +539,7 @@ fieldset {
 
 .pie {
     position: absolute;
+    text-align: center;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -563,6 +549,10 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pie-index {
+    text-align: center;
 }
 
 .pie-registro {
@@ -642,6 +632,44 @@ fieldset {
 .recuperacion input[type="submit"]:hover{
     opacity: 1;
     cursor: pointer;
+}
+
+.borrar {
+    display:none;
+}
+
+.contenedorDatos {
+    min-height: 65vh;
+    width: 75%;
+    text-align: center;
+    background-color: #18191F;
+    margin-top:-20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    padding: 30px;
+    overflow: hidden;
+}
+
+
+.encabezado-datos {
+    font-size: 20px;
+}
+
+.contenedorDatos h4 {
+    width:100%;
+}
+
+.form-logueo {
+    height: 100vh;
+}
+
+.pie-logueo {
+    position: relative;
 }
 
 
@@ -829,7 +857,25 @@ fieldset {
         margin-top: 80px;
     }
 
+    .encabezado-datos {
+        font-size: 16px;
+    }
+
     .recuperacion {
+        margin-top: 30px;
+    }
+
+    .contenedorDatos {
+        width: 80%;
+    }
+
+    .seccion-logueo {
+        font-size: 14px;
+        width: 300px;
+        position: relative;
+    }
+
+    .pie-logueo {
         margin-top: 30px;
     }
 }
