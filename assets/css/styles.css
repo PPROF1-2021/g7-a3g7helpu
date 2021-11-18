@@ -321,7 +321,7 @@ footer p {
 
 .seccion-logueo{
     width: 320px;
-    height: 450px;
+    max-height: 450px;
     background: #CF372D;
     color: white;
     top:50%;
@@ -539,6 +539,7 @@ fieldset {
 
 .pie {
     position: absolute;
+    text-align: center;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -548,6 +549,10 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pie-index {
+    text-align: center;
 }
 
 .pie-registro {
@@ -634,8 +639,8 @@ fieldset {
 }
 
 .contenedorDatos {
-    height: 65vh;
-    width: 60%;
+    min-height: 65vh;
+    width: 75%;
     text-align: center;
     background-color: #18191F;
     margin-top:-20px;
@@ -650,8 +655,21 @@ fieldset {
     overflow: hidden;
 }
 
+
 .encabezado-datos {
     font-size: 20px;
+}
+
+.contenedorDatos h4 {
+    width:100%;
+}
+
+.form-logueo {
+    height: 100vh;
+}
+
+.pie-logueo {
+    position: relative;
 }
 
 
@@ -844,6 +862,20 @@ fieldset {
     }
 
     .recuperacion {
+        margin-top: 30px;
+    }
+
+    .contenedorDatos {
+        width: 80%;
+    }
+
+    .seccion-logueo {
+        font-size: 14px;
+        width: 300px;
+        position: relative;
+    }
+
+    .pie-logueo {
         margin-top: 30px;
     }
 }
