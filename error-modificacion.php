@@ -31,6 +31,7 @@
         <section class="d-flex justify-content-center align-items-center mt-5 pt-5 mb-3" id="seccion">
             <div id="contenedor-datos" class="contenedorDatos">
                 <h4>Error: datos incorrectos. Por favor vuelve a intentarlo nuevamente y controla que escribas el email con el que te registraste correctamente.</h4>
+                <a href="bienvenida.html" class="boton-blanco" id="botonatras">Atrás</a>
             </div>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
